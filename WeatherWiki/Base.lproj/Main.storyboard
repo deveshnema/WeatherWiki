@@ -76,6 +76,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="cityImage" destination="8Vu-fc-seh" id="hQz-Wm-Whs"/>
+                        <outlet property="cityLabel" destination="NvI-f6-Tzk" id="WVR-HV-5Ja"/>
+                        <outlet property="temperatureLabel" destination="fG2-tE-Ife" id="mJo-IH-7tA"/>
+                        <outlet property="weatherImage" destination="Qra-Na-2ru" id="MvE-T5-UVh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,29 +7,50 @@
 //
 
 import UIKit
+import CoreLocation
 
-class WeatherWikiViewController: UIViewController {
-
+class WeatherWikiViewController: UIViewController, CLLocationManagerDelegate {
+    //MARK: constants
+    let WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather"
+    let APP_ID = "4fa2335767fa080b4e2f83136f50e0b2"
+    
+    //MARK: properties
+    let locationManager = CLLocationManager()
+    
+    
+    //MARK: - Outlets
+    @IBOutlet weak var cityImage: UIImageView!
+    @IBOutlet weak var weatherImage: UIImageView!
+    @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var cityLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    //MARK: Location Manager Delegate methods
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations[locations.count - 1]
+        if location.horizontalAccuracy > 0 {
+            locationManager.stopUpdatingLocation()
+            let latitude = location.coordinate.latitude
+            let longitude = location.coordinate.longitude
+            let params : [String : String] = ["lat" : String(latitude), "lon" : String(longitude), "appid" : APP_ID]
+
+        }
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+        cityLabel.text = "Location Unavailable"
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }
