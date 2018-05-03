@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5719CD32EA90AB195041DE56 /* Pods_WeatherWiki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1B8E693B6B4B70FFF768FBE /* Pods_WeatherWiki.framework */; };
-		957D92D1209ADB700061BD20 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 957D92D0209ADB700061BD20 /* Images.xcassets */; };
 		957D92D3209AE5550061BD20 /* ChooseCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957D92D2209AE5550061BD20 /* ChooseCityViewController.swift */; };
 		957D92D5209AE5D50061BD20 /* WeatherWikiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957D92D4209AE5D50061BD20 /* WeatherWikiViewController.swift */; };
+		957D92D7209AE87D0061BD20 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 957D92D6209AE87D0061BD20 /* Images.xcassets */; };
 		95D06FAF209AD62C0052762C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D06FAE209AD62C0052762C /* AppDelegate.swift */; };
 		95D06FB4209AD62C0052762C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D06FB2209AD62C0052762C /* Main.storyboard */; };
 		95D06FB9209AD62E0052762C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D06FB7209AD62E0052762C /* LaunchScreen.storyboard */; };
@@ -19,9 +19,9 @@
 /* Begin PBXFileReference section */
 		5E65A8E230FF9E3D5879D869 /* Pods-WeatherWiki.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherWiki.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherWiki/Pods-WeatherWiki.debug.xcconfig"; sourceTree = "<group>"; };
 		7AF3619EAE17493BBED74270 /* Pods-WeatherWiki.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherWiki.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherWiki/Pods-WeatherWiki.release.xcconfig"; sourceTree = "<group>"; };
-		957D92D0209ADB700061BD20 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Clima-iOS11-master/Clima/Images.xcassets"; sourceTree = SOURCE_ROOT; };
 		957D92D2209AE5550061BD20 /* ChooseCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCityViewController.swift; sourceTree = "<group>"; };
 		957D92D4209AE5D50061BD20 /* WeatherWikiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherWikiViewController.swift; sourceTree = "<group>"; };
+		957D92D6209AE87D0061BD20 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = SOURCE_ROOT; };
 		95D06FAB209AD62C0052762C /* WeatherWiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherWiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D06FAE209AD62C0052762C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95D06FB3209AD62C0052762C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 				95D06FB2209AD62C0052762C /* Main.storyboard */,
 				957D92D4209AE5D50061BD20 /* WeatherWikiViewController.swift */,
 				957D92D2209AE5550061BD20 /* ChooseCityViewController.swift */,
-				957D92D0209ADB700061BD20 /* Images.xcassets */,
+				957D92D6209AE87D0061BD20 /* Images.xcassets */,
 				95D06FB7209AD62E0052762C /* LaunchScreen.storyboard */,
 				95D06FBA209AD62E0052762C /* Info.plist */,
 			);
@@ -151,8 +151,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				957D92D7209AE87D0061BD20 /* Images.xcassets in Resources */,
 				95D06FB9209AD62E0052762C /* LaunchScreen.storyboard in Resources */,
-				957D92D1209ADB700061BD20 /* Images.xcassets in Resources */,
 				95D06FB4209AD62C0052762C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
