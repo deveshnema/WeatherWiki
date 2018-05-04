@@ -10,14 +10,16 @@ import UIKit
 import CoreLocation
 import Alamofire
 import SwiftyJSON
+import SDWebImage
 
 
-class WeatherWikiViewController: UIViewController, CLLocationManagerDelegate {
-    //MARK: constants
+class WeatherWikiViewController: UIViewController, CLLocationManagerDelegate, ChangeCityDelegate {
+    //MARK: Constants
     let WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather"
+    let WIKI_URL = "https://en.wikipedia.org/w/api.php"
     let APP_ID = "4fa2335767fa080b4e2f83136f50e0b2"
     
-    //MARK: properties
+    //MARK: Properties
     let locationManager = CLLocationManager()
     let weatherDataModel = WeatherDataModel()
     
@@ -49,6 +51,29 @@ class WeatherWikiViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    func getWikiData(cityName: String) {
+        let params : [String : String] = [
+            "format" : "json",
+            "action" : "query",
+            "prop" : "pageimages",
+            "titles" : cityName,
+            "indexpageids" : "",
+            "redirects" : "1",
+            "pithumbsize" : "800"
+        ]
+        
+        Alamofire.request(WIKI_URL, method: .get, parameters: params).responseJSON { (response) in
+            if response.result.isSuccess {
+                let wikiJson : JSON = JSON(response.result.value!)
+                let pageid = wikiJson["query"]["pageids"][0].stringValue
+                let imageUrl = wikiJson["query"]["pages"][pageid]["thumbnail"]["source"].stringValue
+                self.cityImage.sd_setImage(with: URL(string: imageUrl))
+            } else {
+                print("Error getting Wikipedia Image")
+            }
+        }
+    }
+    
     //MARK: - Update weather data
     func updateWeatherData(json: JSON) {
         if let tempResult = json["main"]["temp"].double {
@@ -65,8 +90,9 @@ class WeatherWikiViewController: UIViewController, CLLocationManagerDelegate {
     //MARK: - Update UI with weather data
     func updateUIWithWeatherData() {
         cityLabel.text = weatherDataModel.city
-        temperatureLabel.text = "\(weatherDataModel.temperature)"
+        temperatureLabel.text = "\(weatherDataModel.temperature) °"
         weatherImage.image = UIImage(named: weatherDataModel.weatherIconName)
+        getWikiData(cityName: weatherDataModel.city)
     }
 
     //MARK: - Location Manager Delegate methods
@@ -87,6 +113,17 @@ class WeatherWikiViewController: UIViewController, CLLocationManagerDelegate {
         cityLabel.text = "Location Unavailable"
     }
     
-
+    //MARK:- delegate methods
+    func userEnteredANewCityName(name: String) {
+        let params : [String : String] = ["q" : name, "appid" : APP_ID]
+        getWeatherData(url: WEATHER_URL, parameters: params)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "chooseCity" {
+            let destinationVC = segue.destination as! ChooseCityViewController
+            destinationVC.delegate = self
+        }
+    }
     
 }

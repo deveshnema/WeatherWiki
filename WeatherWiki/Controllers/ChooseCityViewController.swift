@@ -8,8 +8,26 @@
 
 import UIKit
 
-class ChooseCityViewController: UIViewController {
+protocol ChangeCityDelegate {
+    func userEnteredANewCityName(name: String)
+}
 
+class ChooseCityViewController: UIViewController {
+    
+    //MARK:- Delegate
+    var delegate : ChangeCityDelegate?
+    
+    //MARK:- Outlets
+    @IBOutlet weak var changeCityTextField: UITextField!
+    
+    @IBAction func getWeather(_ sender: UIButton) {
+        if let cityName = changeCityTextField.text {
+            delegate?.userEnteredANewCityName(name: cityName)
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,14 +40,6 @@ class ChooseCityViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  
 
 }
