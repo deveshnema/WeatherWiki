@@ -11,6 +11,7 @@
 		957D92D3209AE5550061BD20 /* ChooseCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957D92D2209AE5550061BD20 /* ChooseCityViewController.swift */; };
 		957D92D5209AE5D50061BD20 /* WeatherWikiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957D92D4209AE5D50061BD20 /* WeatherWikiViewController.swift */; };
 		957D92D7209AE87D0061BD20 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 957D92D6209AE87D0061BD20 /* Images.xcassets */; };
+		957D92DE209BFE610061BD20 /* WeatherDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957D92DD209BFE610061BD20 /* WeatherDataModel.swift */; };
 		95D06FAF209AD62C0052762C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D06FAE209AD62C0052762C /* AppDelegate.swift */; };
 		95D06FB4209AD62C0052762C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D06FB2209AD62C0052762C /* Main.storyboard */; };
 		95D06FB9209AD62E0052762C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D06FB7209AD62E0052762C /* LaunchScreen.storyboard */; };
@@ -22,6 +23,7 @@
 		957D92D2209AE5550061BD20 /* ChooseCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCityViewController.swift; sourceTree = "<group>"; };
 		957D92D4209AE5D50061BD20 /* WeatherWikiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherWikiViewController.swift; sourceTree = "<group>"; };
 		957D92D6209AE87D0061BD20 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = SOURCE_ROOT; };
+		957D92DD209BFE610061BD20 /* WeatherDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataModel.swift; sourceTree = "<group>"; };
 		95D06FAB209AD62C0052762C /* WeatherWiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherWiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D06FAE209AD62C0052762C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95D06FB3209AD62C0052762C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -51,6 +53,32 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		957D92D8209BFDEA0061BD20 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				95D06FB2209AD62C0052762C /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		957D92D9209BFDFD0061BD20 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				95D06FAE209AD62C0052762C /* AppDelegate.swift */,
+				957D92D4209AE5D50061BD20 /* WeatherWikiViewController.swift */,
+				957D92D2209AE5550061BD20 /* ChooseCityViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		957D92DC209BFE3B0061BD20 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				957D92DD209BFE610061BD20 /* WeatherDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		95D06FA2209AD62C0052762C = {
 			isa = PBXGroup;
 			children = (
@@ -72,10 +100,9 @@
 		95D06FAD209AD62C0052762C /* WeatherWiki */ = {
 			isa = PBXGroup;
 			children = (
-				95D06FAE209AD62C0052762C /* AppDelegate.swift */,
-				95D06FB2209AD62C0052762C /* Main.storyboard */,
-				957D92D4209AE5D50061BD20 /* WeatherWikiViewController.swift */,
-				957D92D2209AE5550061BD20 /* ChooseCityViewController.swift */,
+				957D92DC209BFE3B0061BD20 /* Model */,
+				957D92D8209BFDEA0061BD20 /* View */,
+				957D92D9209BFDFD0061BD20 /* Controllers */,
 				957D92D6209AE87D0061BD20 /* Images.xcassets */,
 				95D06FB7209AD62E0052762C /* LaunchScreen.storyboard */,
 				95D06FBA209AD62E0052762C /* Info.plist */,
@@ -207,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				957D92DE209BFE610061BD20 /* WeatherDataModel.swift in Sources */,
 				957D92D3209AE5550061BD20 /* ChooseCityViewController.swift in Sources */,
 				957D92D5209AE5D50061BD20 /* WeatherWikiViewController.swift in Sources */,
 				95D06FAF209AD62C0052762C /* AppDelegate.swift in Sources */,
