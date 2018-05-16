@@ -17,7 +17,7 @@ class WeatherWikiViewController: UIViewController, CLLocationManagerDelegate, Ch
     //MARK: Constants
     let WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather"
     let WIKI_URL = "https://en.wikipedia.org/w/api.php"
-    let APP_ID = "4fa2335767fa080b4e2f83136f50e0b2"
+    let APP_ID = "abcdef"
     
     //MARK: Properties
     let locationManager = CLLocationManager()
