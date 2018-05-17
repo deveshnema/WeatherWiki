@@ -21,3 +21,4 @@ Weather data and city landmark's images are fetched via REST APIs
 - SDWebImage
 
 ## Screenshots
+![MainScreen](/../screenshots/mainscreen_iphonexspacegrey_portrait.png?raw=true "Main Screen")
