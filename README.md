@@ -21,9 +21,9 @@ Weather data and city landmark's images are fetched via REST APIs
 - SDWebImage
 
 ## Screenshots
-![Main Screen](/../screnshots/mainscreen_iphonexspacegrey_portrait.png?raw=true)
-![Choose City](/../screnshots/choose-city-screen_iphonexspacegrey_portrait.png?raw=true)
-![London](/../screnshots/london-city_iphonexspacegrey_portrait.png?raw=true)
-![Paris](/../screnshots/paris-screen_iphonexspacegrey_portrait.png?raw=true)
-![Bangkok](/../screnshots/bangkok_iphonexspacegrey_portrait.png?raw=true)
+Main Screen: ![alt text](/../screnshots/mainscreen_iphonexspacegrey_portrait.png?raw=true)
+Choose City: ![alt text](/../screnshots/choose-city-screen_iphonexspacegrey_portrait.png?raw=true)
+London (Chosen city): ![alt text](/../screnshots/london-city_iphonexspacegrey_portrait.png?raw=true)
+Paris (Chosen city): ![alt text](/../screnshots/paris-screen_iphonexspacegrey_portrait.png?raw=true)
+Bangkok (Chosen city): ![alt text](/../screnshots/bangkok_iphonexspacegrey_portrait.png?raw=true)
 
