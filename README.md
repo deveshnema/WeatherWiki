@@ -1,5 +1,5 @@
 # WeatherWiki
-An iOS App that shows weather data for a given city
+An iOS (Swift 4) App that shows live weather conditions for a given city
 
 ## Detail
 App displays the following - temperature, weather condition (pictorially), and an image of the chosen city's major landmark(s)
